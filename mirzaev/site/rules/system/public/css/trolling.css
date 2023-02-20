@@ -1,0 +1,17 @@
+#what_image {
+    z-index: 9999999;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    transition: unset;
+}
+
+#what_image.active {
+    display: block;
+}
+
+.hide {
+    position: absolute;
+    display: none;
+}

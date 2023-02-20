@@ -1,0 +1,48 @@
+{
+    "name": "mirzaev/site-rules",
+    "description": "Site with rules of our chat in VK",
+    "readme": "README.md",
+    "keywords": [
+        "rules",
+        "site"
+    ],
+    "type": "site",
+    "homepage": "https://git.mirzaev.sexy/mirzaev/site-rules",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "Arsen Mirzaev Tatyano-Muradovich",
+            "email": "arsen@mirzaev.sexy",
+            "homepage": "https://mirzaev.sexy",
+            "role": "Programmer"
+        }
+    ],
+    "support": {
+        "docs": "https://git.mirzaev.sexy/mirzaev/site-rules/manual",
+        "issues": "https://git.mirzaev.sexy/mirzaev/site-rules/issues"
+    },
+    "require": {
+        "php": "~8.2",
+        "ext-sodium": "~8.2",
+        "mirzaev/minimal": "^2.0.x-dev",
+        "mirzaev/accounts": "~1.2.x-dev",
+        "mirzaev/arangodb": "^1.0.0",
+        "mirzaev/vk": "^4.0",
+        "triagens/arangodb": "~3.9.x-dev",
+        "twig/twig": "^3.4",
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "mirzaev\\site\\rules\\": "mirzaev/site/rules/system"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "mirzaev\\site\\rules\\tests\\": "mirzaev/site/rules/tests"
+        }
+    }
+}

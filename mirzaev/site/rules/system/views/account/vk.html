@@ -1,0 +1,11 @@
+{% block body %}
+<img src="/images/truth.jpg" alt="никому не показывай" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
+{% endblock %}
+
+{% block js_init %}
+<script>
+    setTimeout(fn => {
+        window.opener.vk.close();
+    }, 2000);
+</script>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% use 'hotline/index.html' with css as hotline_css, body as hotline_body, js as hotline_js, js_init as hotline_js_init %}
+
+{% block css %}
+{# {{ block('hotline_css') }} #}
+{% endblock %}
+
+{% block body %}
+<aside>
+    {{ block('hotline_body') }}
+</aside>
+{% endblock %}
+
+{% block js %}
+{# {{ block('hotline_js') }} #}
+{% endblock %}
+
+{% block js_init %}
+{# {{ block('hotline_js_init') }} #}
+{% endblock %}

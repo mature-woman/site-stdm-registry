@@ -1,0 +1,14 @@
+{% block body %}
+<section id="panel">
+    {% if account %}
+    {{ account.getKey() }}
+    {% if vk %}
+    {{ vk.mail }}
+    {% endif %}
+    {% else %}
+    <button id="login" onclick="return account.authentication(this)">
+        Войти в аккаунт
+    </button>
+    {% endif %}
+</section>
+{% endblock %}

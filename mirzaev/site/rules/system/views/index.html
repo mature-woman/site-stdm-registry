@@ -1,0 +1,37 @@
+{% extends "core.html" %}
+
+{% use "core.html" with css as core_css, body as core_body, js as core_js, js_init as core_js_init %}
+{% use "trolling.html" with css as trolling_css, body as trolling_body, js as trolling_js %}
+{% use "header.html" with css as header_css, body as header_body, js as header_js, js_init as header_js_init %}
+
+{% block css %}
+{{ block('core_css') }}
+{{ block('trolling_css') }}
+{{ block('header_css') }}
+{% endblock %}
+
+{% block body %}
+{{ block('core_body') }}
+{{ block('trolling_body') }}
+{{ block('header_body') }}
+
+<main>
+	<noscript>К сожалению мой сайт ещё пока не готов для работы без javascript</noscript>
+	{% block main %}
+  {% include 'rules.html' %}
+	{% endblock %}
+</main>
+
+{# {% include 'footer.html' %} #}
+{% endblock %}
+
+{% block js %}
+{{ block('core_js') }}
+{{ block('trolling_js') }}
+{{ block('header_js') }}
+{% endblock %}
+
+{% block js_init %}
+{{ block('core_js_init') }}
+{{ block('header_js_init') }}
+{% endblock %}

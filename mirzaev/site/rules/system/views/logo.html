@@ -1,0 +1,56 @@
+{% use 'hotline/index.html' with css as hotline_css, body as hotline_body, js as hotline_js %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/css/logo.css" />
+{{ block('hotline_css') }}
+{% endblock %}
+
+{% block body %}
+<div id="logo" class="unselectable">
+    <h1>VIRUS</h1>
+    <h4>Скачать вирусы бесплатно</h4>
+
+    {% with %}
+    {% set hotline = hotline|merge({'id': 'hotline_logo'}) %}
+    {{ block('hotline_body') }}
+    {% endwith %}
+</div>
+{% endblock %}
+
+
+{% block js %}
+{{ block('hotline_js') }}
+{% endblock %}
+
+{% block js_init %}
+{{ block('hotline_js_init') }}
+<script>
+    document.addEventListener('hotline.loaded', function (e) {
+        // Запуск препроцессора бегущих строк
+
+        // Инициализация элемента бегущей строки
+        const element_hotline = document.getElementById('hotline');
+        const element_hotline_logo = document.getElementById('hotline_logo');
+
+        // Инициализация слушателя
+        element_hotline.hotline.events.set('move.block', true);
+        element_hotline.hotline.events.set('move.unblock', true);
+        element_hotline.hotline.events.set('onmousemove', true);
+
+        document.addEventListener(`hotline.${element_hotline.id}.move.block`, function (e) {
+            // Копирование блокировки
+            element_hotline_logo.hotline.move = false;
+        });
+
+        document.addEventListener(`hotline.${element_hotline.id}.move.unblock`, function (e) {
+            // Копирование блокировки
+            element_hotline_logo.hotline.move = true;
+        });
+
+        document.addEventListener(`hotline.${element_hotline.id}.onmousemove`, function (e) {
+            // Копирование перемещения
+            element_hotline_logo.hotline.offset(e.detail.to);
+        });
+    });
+</script>
+{% endblock %}
