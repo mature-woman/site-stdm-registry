@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mirzaev\site\rules\views;
+namespace mirzaev\site\stdm\registry\views;
 
 use mirzaev\minimal\controller;
 
@@ -12,7 +12,7 @@ use Twig\Environment as view;
 /**
  * Менеджер представлений
  *
- * @package mirzaev\site\rules\controllers
+ * @package mirzaev\site\stdm\registry\controllers
  * @author Arsen Mirzaev Tatyano-Muradovich <arsen@mirzaev.sexy>
  */
 final class manager extends controller

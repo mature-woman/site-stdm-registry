@@ -8,7 +8,7 @@
     findUnusedBaselineEntry="true"
 >
     <projectFiles>
-        <directory name="mirzaev/site/rules/system" />
+        <directory name="mirzaev/site/stdm/registry/system" />
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>

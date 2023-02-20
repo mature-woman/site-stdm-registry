@@ -1,13 +1,13 @@
 {
-    "name": "mirzaev/site-rules",
-    "description": "Site with rules of our chat in VK",
+    "name": "mirzaev/site-stdm-registry",
+    "description": "Interface with access to the data register with spare parts for special equipment",
     "readme": "README.md",
     "keywords": [
-        "rules",
+        "registry",
         "site"
     ],
     "type": "site",
-    "homepage": "https://git.mirzaev.sexy/mirzaev/site-rules",
+    "homepage": "https://git.mirzaev.sexy/mirzaev/site-stdm-registry",
     "license": "WTFPL",
     "authors": [
         {
@@ -18,16 +18,14 @@
         }
     ],
     "support": {
-        "docs": "https://git.mirzaev.sexy/mirzaev/site-rules/manual",
-        "issues": "https://git.mirzaev.sexy/mirzaev/site-rules/issues"
+        "docs": "https://git.mirzaev.sexy/mirzaev/site-stdm-registry/manual",
+        "issues": "https://git.mirzaev.sexy/mirzaev/site-stdm-registry/issues"
     },
     "require": {
         "php": "~8.2",
         "ext-sodium": "~8.2",
         "mirzaev/minimal": "^2.0.x-dev",
-        "mirzaev/accounts": "~1.2.x-dev",
         "mirzaev/arangodb": "^1.0.0",
-        "mirzaev/vk": "^4.0",
         "triagens/arangodb": "~3.9.x-dev",
         "twig/twig": "^3.4",
         "guzzlehttp/guzzle": "^7.5"
@@ -37,12 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "mirzaev\\site\\rules\\": "mirzaev/site/rules/system"
+            "mirzaev\\site\\stdm\\registry\\": "mirzaev/site/stdm/registry/system"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "mirzaev\\site\\rules\\tests\\": "mirzaev/site/rules/tests"
+            "mirzaev\\site\\stdm\\registry\\tests\\": "mirzaev/site/stdm/registry/tests"
         }
     }
 }

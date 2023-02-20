@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mirzaev\site\rules\models;
+namespace mirzaev\site\stdm\registry\models;
 
 use mirzaev\minimal\model;
 
@@ -13,7 +13,7 @@ use exception;
 /**
  * Ядро моделей
  *
- * @package mirzaev\site\rules\models
+ * @package mirzaev\site\stdm\registry\models
  * @author Arsen Mirzaev Tatyano-Muradovich <arsen@mirzaev.sexy>
  */
 class core extends model

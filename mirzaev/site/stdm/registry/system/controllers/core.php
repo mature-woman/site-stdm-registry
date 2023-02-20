@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace mirzaev\site\rules\controllers;
+namespace mirzaev\site\stdm\registry\controllers;
 
 // Файлы проекта
-use mirzaev\site\rules\views\manager;
-use mirzaev\site\rules\models\core as models;
-use mirzaev\site\rules\models\account_model as account;
-use mirzaev\site\rules\models\session_model as session;
+use mirzaev\site\stdm\registry\views\manager;
+use mirzaev\site\stdm\registry\models\core as models;
+use mirzaev\site\stdm\registry\models\account_model as account;
+use mirzaev\site\stdm\registry\models\session_model as session;
 
 // Библиотека для ArangoDB
 use ArangoDBClient\Document as _document;
@@ -23,7 +23,7 @@ use mirzaev\vk\robots\user as robot;
 /**
  * Ядро контроллеров
  *
- * @package mirzaev\site\rules\controllers
+ * @package mirzaev\site\stdm\registry\controllers
  * @author Arsen Mirzaev Tatyano-Muradovich <arsen@mirzaev.sexy>
  */
 class core extends controller

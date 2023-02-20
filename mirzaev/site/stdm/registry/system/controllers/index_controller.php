@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace mirzaev\site\rules\controllers;
+namespace mirzaev\site\stdm\registry\controllers;
 
 // Файлы проекта
-use mirzaev\site\rules\controllers\core;
+use mirzaev\site\stdm\registry\controllers\core;
 
 /**
  * Контроллер основной страницы
  *
- * @package mirzaev\site\rules\controllers
+ * @package mirzaev\site\stdm\registry\controllers
  * @author Arsen Mirzaev Tatyano-Muradovich <arsen@mirzaev.sexy>
  */
 final class index_controller extends core

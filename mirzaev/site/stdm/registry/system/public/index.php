@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mirzaev\site\rules;
+namespace mirzaev\site\stdm\registry;
 
 use mirzaev\minimal\core;
 use mirzaev\minimal\router;
@@ -16,7 +16,7 @@ define('STORAGE', realpath('..' . DIRECTORY_SEPARATOR . 'storage'));
 define('INDEX', __DIR__);
 
 // Автозагрузка
-require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
 // Инициализация маршрутазитора
 $router = new router;

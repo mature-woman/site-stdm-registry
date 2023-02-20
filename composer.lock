@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b8186615d97b2bad3b83ba79c939875",
+    "content-hash": "fc26b5dfc36fdab31f67aaa3a6a09e06",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -338,113 +338,6 @@
             "time": "2022-10-26T14:07:24+00:00"
         },
         {
-            "name": "jasny/error-handler",
-            "version": "v0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jasny/error-handler.git",
-                "reference": "38e076fc36d86689010081bc2eab96f12d97b0d8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jasny/error-handler/zipball/38e076fc36d86689010081bc2eab96f12d97b0d8",
-                "reference": "38e076fc36d86689010081bc2eab96f12d97b0d8",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0",
-                "psr/http-message": "^1.0",
-                "psr/log": "^1.0"
-            },
-            "require-dev": {
-                "jasny/http-message": "^1.3",
-                "jasny/php-code-quality": "^2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Jasny\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Arnold Daniels",
-                    "email": "arnold@jasny.net",
-                    "homepage": "http://www.jasny.net"
-                }
-            ],
-            "description": "Error handler with PSR-7 support",
-            "keywords": [
-                "error handler",
-                "exception handler",
-                "middleware"
-            ],
-            "support": {
-                "issues": "https://github.com/jasny/error-handler/issues",
-                "source": "https://github.com/jasny/error-handler"
-            },
-            "abandoned": true,
-            "time": "2017-01-25T01:27:18+00:00"
-        },
-        {
-            "name": "mirzaev/accounts",
-            "version": "1.2.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://git.mirzaev.sexy/mirzaev/accounts",
-                "reference": "aa93c4d26395025fa16bb65e8a40332ac352a742"
-            },
-            "require": {
-                "ext-dom": "*",
-                "ext-libxml": "*",
-                "guzzlehttp/guzzle": "^7.5",
-                "php": "~8.2"
-            },
-            "require-dev": {
-                "phpdocumentor/phpdocumentor": ">=2.9",
-                "phpunit/phpunit": "^9"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "mirzaev\\accounts\\": "mirzaev/accounts/system"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "WTFPL"
-            ],
-            "authors": [
-                {
-                    "name": "Arsen Mirzaev Tatyano-Muradovich",
-                    "email": "arsen@mirzaev.sexy",
-                    "homepage": "https://mirzaev.sexy",
-                    "role": "Programmer"
-                }
-            ],
-            "description": "Simple accounts manager",
-            "homepage": "https://git.mirzaev.sexy/mirzaev/accounts",
-            "keywords": [
-                "accounts"
-            ],
-            "support": {
-                "email": "arsen@mirzaev.sexy",
-                "issues": "https://git.mirzaev.sexy/mirzaev/accounts/issues",
-                "wiki": "https://git.mirzaev.sexy/mirzaev/accounts/wiki"
-            },
-            "funding": [
-                {
-                    "url": "https://fund.mirzaev.sexy",
-                    "type": "funding"
-                }
-            ],
-            "time": "2023-02-17T08:36:36+00:00"
-        },
-        {
             "name": "mirzaev/arangodb",
             "version": "1.0.2",
             "source": {
@@ -538,144 +431,6 @@
                 "issues": "https://git.mirzaev.sexy/mirzaev/minimal/issues"
             },
             "time": "2022-11-03T06:09:32+00:00"
-        },
-        {
-            "name": "mirzaev/vk",
-            "version": "4.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.mirzaev.sexy/mirzaev/vk",
-                "reference": "39d13d9020c41d03f389254a4c2cda97cb61b8de"
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.5",
-                "jasny/error-handler": "^0.2",
-                "mirzaev/accounts": "^1.2.0",
-                "monolog/monolog": "^1.6",
-                "php": "^8.1",
-                "psr/log": "^1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5"
-            },
-            "suggest": {
-                "ext-sodium": "Can be selected in some conditions to increase security"
-            },
-            "type": "framework",
-            "autoload": {
-                "psr-4": {
-                    "mirzaev\\vk\\": "mirzaev/vk/system"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "WTFPL"
-            ],
-            "authors": [
-                {
-                    "name": "Arsen Mirzaev Tatyano-Muradovich",
-                    "email": "arsen@mirzaev.sexy",
-                    "homepage": "https://mirzaev.sexy/mirzaev",
-                    "role": "Programmer"
-                }
-            ],
-            "description": "Framework for vk.com API",
-            "homepage": "https://git.mirzaev.sexy/mirzaev/vk",
-            "keywords": [
-                "api",
-                "vk"
-            ],
-            "support": {
-                "docs": "https://git.mirzaev.sexy/mirzaev/vk/wiki",
-                "issues": "https://git.mirzaev.sexy/mirzaev/vk/issues"
-            },
-            "time": "2022-11-10T13:15:06+00:00"
-        },
-        {
-            "name": "monolog/monolog",
-            "version": "1.27.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "904713c5929655dc9b97288b69cfeedad610c9a1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/904713c5929655dc9b97288b69cfeedad610c9a1",
-                "reference": "904713c5929655dc9b97288b69cfeedad610c9a1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
-            },
-            "provide": {
-                "psr/log-implementation": "1.0.0"
-            },
-            "require-dev": {
-                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
-                "doctrine/couchdb": "~1.0@dev",
-                "graylog2/gelf-php": "~1.0",
-                "php-amqplib/php-amqplib": "~2.4",
-                "php-console/php-console": "^3.1.3",
-                "phpstan/phpstan": "^0.12.59",
-                "phpunit/phpunit": "~4.5",
-                "ruflin/elastica": ">=0.90 <3.0",
-                "sentry/sentry": "^0.13",
-                "swiftmailer/swiftmailer": "^5.3|^6.0"
-            },
-            "suggest": {
-                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
-                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
-                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
-                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
-                "php-console/php-console": "Allow sending log messages to Google Chrome",
-                "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "sentry/sentry": "Allow sending log messages to a Sentry server"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Monolog\\": "src/Monolog"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                }
-            ],
-            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
-            "homepage": "http://github.com/Seldaek/monolog",
-            "keywords": [
-                "log",
-                "logging",
-                "psr-3"
-            ],
-            "support": {
-                "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/1.27.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/Seldaek",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-06-09T08:53:42+00:00"
         },
         {
             "name": "psr/http-client",
@@ -836,56 +591,6 @@
                 "source": "https://github.com/php-fig/http-message/tree/master"
             },
             "time": "2016-08-06T14:39:51+00:00"
-        },
-        {
-            "name": "psr/log",
-            "version": "1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for logging libraries",
-            "homepage": "https://github.com/php-fig/log",
-            "keywords": [
-                "log",
-                "psr",
-                "psr-3"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.4"
-            },
-            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -3037,7 +2742,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mirzaev/minimal": 20,
-        "mirzaev/accounts": 20,
         "triagens/arangodb": 20
     },
     "prefer-stable": false,
