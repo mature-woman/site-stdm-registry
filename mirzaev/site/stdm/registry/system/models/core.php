@@ -19,6 +19,31 @@ use exception;
 class core extends model
 {
     /**
+     * Коллекция в которой хранятся аккаунты
+     */
+    public const SETTINGS = '../settings/arangodb.php';
+
+    /**
+     * Соединение с базой данных
+     */
+    protected static connection $db;
+
+    public function __construct(connection $db = null)
+    {
+        if (isset($db)) {
+            // Получена инстанция соединения с базой данных
+
+            // Запись и инициализация соединения с базой данных
+            $this->__set('db', $db);
+        } else {
+            // Не получена инстанция соединения с базой данных
+
+            // Инициализация соединения с базой данных по умолчанию
+            $this->__get('db');
+        }
+    }
+
+    /**
      * Записать свойство
      *
      * @param string $name Название

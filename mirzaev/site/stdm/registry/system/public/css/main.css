@@ -126,6 +126,7 @@ main>form#panel>section#result {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 3px;
   background-color: var(--background-light-inner);
 }
 main>form#panel>label>button[type="submit"] {

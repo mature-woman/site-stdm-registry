@@ -51,7 +51,7 @@ class core extends controller
 
     // Инициализация журнала ошибок
     $this->variables['errors'] = [
-      'vk' => []
+      'account' => []
     ];
 
     // Инициализация препроцессора представления

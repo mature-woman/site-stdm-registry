@@ -1,6 +1,6 @@
 {
     "name": "mirzaev/site-stdm-registry",
-    "description": "Interface with access to the data register with spare parts for special equipment",
+    "description": "Interface with access to the data registry with spare parts for special equipment",
     "readme": "README.md",
     "keywords": [
         "registry",
