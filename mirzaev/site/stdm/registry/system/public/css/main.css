@@ -1,11 +1,19 @@
 @import url('/fonts/comissioner.ttf');
 
+@keyframes key_rotate {
+  100% {
+    rotate: -60deg;
+  }
+}
+
 :root {
+  --background-light-inner  : #f7f7f8;
   --background-light  : #fff;
   --background        : #f0eefb;
   --background-important : #123eab;
-  --text              : #020202;
   --text-light        : #fafafa;
+  --text              : #020202;
+  --text-dark: #bcb1ca;
   --text-hover        : #fff;
   --text-active       : #d0d0d0;
 }
@@ -18,6 +26,10 @@
   color          : var(--text);
   font-family    : 'Commissioner', Roboto, sans-serif;
   transition     : 0.1s ease-out;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .unselectable {
@@ -52,8 +64,8 @@ aside {
 
 header {
   z-index       : 5000;
-  width: 800px;
-  height: 80px;
+  width: 500px;
+  height: 60px;
   margin: 0 auto;
   display       : flex;
   border-radius: 3px 3px 0 0;
@@ -62,17 +74,74 @@ header {
 
 header>h1 {
   margin: auto;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--text-light);
 }
 
 main {
   z-index    : 1000;
-  width: calc(800px - 40px);
+  width: calc(500px - 40px);
   margin: 0 auto;
   padding: 20px;
   border-radius: 0 0 3px 3px;
   background-color: var(--background-light)
+}
+
+main>form#panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main>form#panel>label {
+  padding: 0 7px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 30px;
+}
+
+main>form#panel>label>input {
+  width: 100%;
+  padding: 0 5px;
+  border-bottom: 2px solid var(--background-light-inner);
+  height: 100%;
+}
+
+main>form#panel>label>svg {
+  margin-right: 7px;
+}
+
+main>form#panel>label>svg#icon_key {
+  rotate: -50deg;
+  animation-duration       : .6s;
+  animation-direction: alternate;
+  animation-name           : key_rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.65,.05,.36,1);
+}
+
+main>form#panel>section#result {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-light-inner);
+}
+main>form#panel>label>button[type="submit"] {
+  margin-left: 20px;
+  height: 100%;
+  padding: 0 20px;
+  border-radius: 3px;
+}
+
+main>form#panel>section#result>svg#icon_result *,
+main>form#panel>label>svg * {
+  color: var(--text-dark);
+}
+
+main>form#panel>section#result.inactive {
+  cursor: not-allowed;
 }
 
 main>ol {
@@ -92,3 +161,4 @@ main>ol>li::marker {
 footer {
   z-index    : 3000;
 }
+

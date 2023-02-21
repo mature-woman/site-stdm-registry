@@ -1,3 +1,74 @@
-<form action="/search" method="POST">
-  <input type="text" name="key" id="key" value="Ключ выдаётся администратором"> 
+<form id="panel" action="/search" method="POST">
+  <label>
+    <svg
+      id="icon_key"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M6 8C4.34315 8 3 9.34315 3 11V13C3 14.6569 4.34315 16 6 16C7.65685 16 9 14.6569 9 13H15V15H17V13H18V15H20V11H9C9 9.34315 7.65685 8 6 8ZM7 13V11C7 10.4477 6.55228 10 6 10C5.44772 10 5 10.4477 5 11V13C5 13.5523 5.44772 14 6 14C6.55228 14 7 13.5523 7 13Z"
+      fill="currentColor"
+      />
+    </svg>
+      <input type="text" name="key" id="key" placeholder="Ключ аутентификации">
+  </label>
+  <label>
+    <svg
+      id="icon_search"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+      fill="currentColor"
+      />
+    </svg> 
+      <input type="text" name="search" id="search" placeholder="Артикул">
+      <button type="submit">Поиск</button>
+  </label>
+  <section id="result" class="inactive">
+    <svg
+      id="icon_result"
+      width="80"
+      height="80"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M7.7572 6.3431L11.9998 2.10046L16.2425 6.3431L11.9998 10.5857L7.7572 6.3431ZM10.5856 6.3431L11.9998 4.92889L13.4141 6.3431L11.9998 7.75732L10.5856 6.3431Z"
+      fill="currentColor"
+      />
+      <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M2.10046 11.9999L6.3431 7.75726L10.5857 11.9999L6.3431 16.2425L2.10046 11.9999ZM4.92889 11.9999L6.3431 10.5857L7.75732 11.9999L6.3431 13.4141L4.92889 11.9999Z"
+      fill="currentColor"
+      />
+      <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M13.4142 11.9999L17.6568 16.2425L21.8995 11.9999L17.6568 7.75726L13.4142 11.9999ZM17.6568 10.5857L16.2426 11.9999L17.6568 13.4141L19.071 11.9999L17.6568 10.5857Z"
+      fill="currentColor"
+      />
+      <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M7.7572 17.6569L11.9998 13.4142L16.2425 17.6569L11.9998 21.8995L7.7572 17.6569ZM10.5856 17.6569L11.9998 16.2427L13.4141 17.6569L11.9998 19.0711L10.5856 17.6569Z"
+      fill="currentColor"
+      />
+    </svg>
+  </section>
 </form>
