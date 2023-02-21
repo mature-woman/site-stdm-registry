@@ -23,7 +23,6 @@ $router = new router;
 
 // Запись маршрутов
 $router->write('/', 'index', 'index');
-$router->write('/search', 'search', 'search', 'POST');
 
 // Инициализация ядра
 $core = new core(namespace: __NAMESPACE__, router: $router);

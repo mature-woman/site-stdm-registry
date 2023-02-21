@@ -1,4 +1,4 @@
-<form id="panel" action="/search" method="POST">
+<form id="panel" action="/" method="GET">
   <label>
     <svg
       id="icon_key"
@@ -15,7 +15,7 @@
       fill="currentColor"
       />
     </svg>
-      <input type="text" name="key" id="key" placeholder="Ключ аутентификации">
+      <input type="text" name="key" id="key" placeholder="Ключ аутентификации" value="{{ key }}">
   </label>
   <label>
     <svg
@@ -33,10 +33,14 @@
       fill="currentColor"
       />
     </svg> 
-      <input type="text" name="search" id="search" placeholder="Артикул">
+      <input type="text" name="search" id="search" placeholder="Артикул" value="{{ search }}">
       <button type="submit">Поиск</button>
   </label>
-  <section id="result" class="inactive">
+  <section id="result">
+    {% if result is not empty %}
+    {{ result|markdown_to_html }}
+    {% else %}
+    {{ result }}
     <svg
       id="icon_result"
       width="80"
@@ -69,6 +73,7 @@
       d="M7.7572 17.6569L11.9998 13.4142L16.2425 17.6569L11.9998 21.8995L7.7572 17.6569ZM10.5856 17.6569L11.9998 16.2427L13.4141 17.6569L11.9998 19.0711L10.5856 17.6569Z"
       fill="currentColor"
       />
+      {% endif %}
     </svg>
   </section>
 </form>

@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace mirzaev\site\stdm\registry\controllers;
 
 // Файлы проекта
-use mirzaev\site\stdm\registry\controllers\core;
+use mirzaev\site\stdm\registry\controllers\core,
+    mirzaev\site\stdm\registry\models\account_model as account,
+    mirzaev\site\stdm\registry\models\part_model as part;
 
 /**
  * Контроллер основной страницы
@@ -15,57 +17,34 @@ use mirzaev\site\stdm\registry\controllers\core;
  */
 final class index_controller extends core
 {
-    /**
-     * Главная страница
-     *
-     * @param array $parameters Параметры запроса
-     */
-    public function index(array $parameters = []): ?string
-    {
-        // Инициализация загружаемых категорий
-        $this->variables['include'] = [
-            'head' => ['self'],
-            'body' => ['self']
-        ];
+  /**
+   * Главная страница
+   *
+   * @param array $parameters Параметры запроса
+   */
+  public function index(array $parameters = []): ?string
+  {
+    // Инициализация журнала ошибок
+    $this->variables['errors']['search'] = [];
 
-        // Инициализация бегущей строки
-        $this->variables['hotline'] = [
-            'id' => $this->variables['request']['id'] ?? 'hotline'
-        ];
+    if (!empty($parameters['key']) && !empty($parameters['search'])) {
+      // Получены данные поиска
 
-        // Инициализация параметров бегущей строки
-        $this->variables['hotline']['parameters'] = [
-            // 'step' => 2
-        ];
+      if (account::authorization($parameters['key'], $this->variables['errors']['account'])) {
+        // Авторизован запрос
 
-        // Инициализация аттрибутов бегущей строки
-        $this->variables['hotline']['attributes'] = [
-
-        ];
-
-        // Инициализация элементов бегущей строки
-        $this->variables['hotline']['elements'] = [
-            ['content' => '1'],
-            [
-                'tag' => 'article',
-                'content' => '2'
-            ],
-            ['content' => '3'],
-            ['content' => '4'],
-            ['content' => '5'],
-            ['content' => '6'],
-            ['content' => '7'],
-            ['content' => '8'],
-            ['content' => '9'],
-            ['content' => '10'],
-            ['content' => '11'],
-            ['content' => '12'],
-            ['content' => '13'],
-            ['content' => '14'],
-            ['content' => '15']
-        ];
-
-        // Генерация представления
-        return $this->view->render(DIRECTORY_SEPARATOR . 'index.html', $this->variables);
+        // Поиск данных запчасти и запись в переменную
+        $this->variables['result'] = part::search($parameters['search'], $this->variables['errors']['search'])->body ?? null;
+      }
     }
+    
+    // Инициализация переменных
+    $this->variables['key'] = $parameters['key'] ?? '';
+    $this->variables['search'] = $parameters['search'] ?? '';
+
+/* var_dump($this->variables); die; */
+
+    // Генерация представления
+    return $this->view->render(DIRECTORY_SEPARATOR . 'index.html', $this->variables);
+  }
 }

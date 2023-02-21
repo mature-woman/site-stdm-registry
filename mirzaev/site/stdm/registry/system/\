@@ -15,13 +15,13 @@
 <main>
 	{% block main %}
   {% include 'search.html' %}
-  {% if errors.account is not empty or errors.search is not empty %}<h3>Журнал</h3>{% endif %}
+  {% if errors is not empty %}<h3>Журнал</h3>{% endif %}
   {% for error in errors %}
-    <ol>
+    <ul>
       {% for data in error %}
-      <li>{{ data.text }}</li>
+        <ol>{{ data.text }}</ol>
       {% endfor %}
-    </ol>
+    </ul>
   {% endfor %}
 	{% endblock %}
 </main>

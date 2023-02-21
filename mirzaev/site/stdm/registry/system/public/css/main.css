@@ -141,22 +141,25 @@ main>form#panel>label>svg * {
   color: var(--text-dark);
 }
 
-main>form#panel>section#result.inactive {
+main>form#panel>section#result:has(> svg) {
   cursor: not-allowed;
 }
 
+main>h3 {
+  text-align: center;
+  margin: 30px 0 20px 0;
+}
+
 main>ol {
-  margin: 50px 100px;
-  font-size: 1.2rem;
+  margin: 0px;
+}
+
+main>ol:last-of-type {
+  margin-bottom: 15px;
 }
 
 main>ol>li {
-  padding-left: 40px;
-  margin-bottom: 8px;
-}
-
-main>ol>li::marker {
-  /* font-size: 1.3rem; */
+  padding-left: 10px;
 }
 
 footer {
